@@ -1,0 +1,71 @@
+/*start global*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+:root {
+  --blue-color: #2980b9;
+  --grey-color: #7f8c8d;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+/*end global*/
+/*framework*/
+.align-center {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: background-color 1s ease;
+}
+.btn-blue {
+  border: var(--blue-color) 1px solid;
+  color: var(--blue-color);
+  border-radius: 2.5px;
+}
+.btn-grey {
+  border: var(--grey-color) 1px solid;
+  color: var(--grey-color);
+  border-radius: 2.5px;
+}
+.btn-blue:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.btn-grey:hover {
+  background-color: var(--grey-color);
+  color: white;
+}
+/*end framework*/
+/*form style*/
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.form-container input[type="text"],
+.form-container textarea {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.form-container textarea {
+  resize: none;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+.form-container .block {
+  margin: 20px auto 0px;
+}
+/*end form styles*/

@@ -7,7 +7,7 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     cb(
       null,
-      `${file.fieldname}-${Date.now()}-${path.extname(file.originalname)}`
+      `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`
     );
   },
 });
@@ -32,7 +32,7 @@ function checkFileType(file, cb) {
     return cb(null, true);
     console.log("hello");
   } else {
-    cb("images only");
+    cb("يمكنك اختيار الصور فقط");
   }
 }
 //route to create-site
@@ -46,9 +46,8 @@ const sites_create_post = (req, res) => {
       res.render("upload", { msg: err, title: "الرئيسية" });
     } else {
       const reqBody = req.body;
-      const imgUri = `${req.file.fieldname}-${Date.now()}-${path.extname(req.file.originalname)}`;
+      const imgUri = req.file.filename;
       const site = new Site({ ...reqBody, imgUri });
-      console.log(site)
       site.save().then(()=>{
         res.redirect("/")
       }).catch((err)=>{console.log(err)})

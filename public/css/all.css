@@ -8,7 +8,13 @@
   padding: 0px;
   margin: 0px;
 }
+html {
+  height: 100%;
+}
 body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   direction: rtl;
   font-family: "Cairo", sans-serif;
 }
@@ -69,3 +75,23 @@ body {
   margin: 20px auto 0px;
 }
 /*end form styles*/
+/*footer styles*/
+footer {
+  font-size: 1.1rem;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+footer hr {
+  border: 1px solid #c1c1c1c1;
+}
+.icon-heart {
+  color: #b71540;
+  margin-top: auto;
+}
+/*end footer styles*/
+/*media queries*/
+@media (max-width: 750px) {
+  .form-container {
+    width: 85%;
+  }
+}

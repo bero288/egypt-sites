@@ -2,6 +2,7 @@
 <html lang="en">
   <%-include("./partials/head.ejs") %>
   <body>
+    <%-include("./partials/nav.ejs") %> 
     <div class="form-container">
       <h3 class="align-center">إنشاء موقع سياحي جديد</h3>
       <%if(typeof msg != "undefined"){%>  
@@ -9,7 +10,6 @@
         <% msg = " حجم الصورة كبير جداَ"%>
         <p class="err-msg"><%= msg %> </p>
         <%}else{%>
-          <% msg = "مسموح بالصور فقط"%>
           <p class="err-msg"><%= msg %> </p>
         <% } %> 
         <%} %>
@@ -23,7 +23,7 @@
         <label for="body">جسم الموضوع :</label>
         <textarea name="body" id="body"></textarea>
         <label for="img" class="btn btn-grey">اختر صورة</label>
-        <input name="myImg" id="img" type="file" hidden />
+        <input name="myImg" id="img" type="file" hidden required/>
         <input type="submit" class="btn btn-blue block sumbit" value="ارسال" />
       </form>
     </div>

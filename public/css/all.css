@@ -65,8 +65,7 @@ header{
   z-index: 1000;
 }
 header .activator {
-  padding: .7em;
-  border-radius:100% ;
+  padding: 1em;
   transition: all ease .5s;
 }
 
@@ -77,10 +76,7 @@ header .activator:hover {
 header .activator.clicked {
   color: white;
   background-color: var(--graylish-blue-bright-color);
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+
 }
 header ul {
   display: flex;

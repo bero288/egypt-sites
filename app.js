@@ -11,6 +11,7 @@ const uploadRouter = require("./routes/uploadRoutes");
 const authRouter = require("./routes/authRoutes");
 //init the app
 const app = express();
+app.use(express.json());
 //init the port
 const port = process.env.PORT || 3000;
 //connect to the db

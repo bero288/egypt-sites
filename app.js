@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const mongoDbSession = require("connect-mongodb-session")(session);
+const Site = require("./model/site")
 require("dotenv").config();
 //import routes
 const uploadRouter = require("./routes/uploadRoutes");
@@ -64,5 +65,10 @@ app.use(authRouter);
 app.use(uploadRouter);
 //main route (Home)
 app.get("/", (req, res) => {
-  res.render("./sites/index", { title: "الرئيسية" });
+  Site.find()
+    .sort({ createdAt: -1 })
+    .then((result) => {
+       res.render("./sites/index", { title: "الرئيسية", sites:result});
+    })
+    .catch((err) => console.log(err));
 });

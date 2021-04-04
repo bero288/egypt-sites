@@ -47,13 +47,16 @@ const sites_create_post = (req, res) => {
     } else {
       const reqBody = req.body;
       const imgUri = req.file.filename;
-      const site = new Site({ ...reqBody, imgUri });
+      const userId = req.session.userId;
+      const userName = req.session.userName;
+      const site = new Site({ ...reqBody, imgUri, userId, userName });
       site.save().then(()=>{
         res.redirect("/")
       }).catch((err)=>{console.log(err)})
     }
   });
 };
+
 module.exports = {
   sites_create,
   sites_create_post,

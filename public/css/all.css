@@ -6,7 +6,7 @@
   --graylish-blue-color: #2c3e50;
   --graylish-blue-bright-color: #34495e;
   --green-color: #27ae60;
-  --red-color:#c0392b;
+  --red-color: #c0392b;
 }
 * {
   padding: 0px;
@@ -14,6 +14,7 @@
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   min-height: 100%;
@@ -30,7 +31,7 @@ body {
 .block {
   display: block;
 }
-.btn {
+.btn-mine {
   border: none;
   background: transparent;
   cursor: pointer;
@@ -74,6 +75,15 @@ body {
 .btn-red:hover {
   background-color: var(--red-color);
   color: white;
+}
+.btn-more {
+  border: white 1px solid;
+  color: white;
+  border-radius: 2.5px;
+}
+.btn-more:hover {
+  color: black;
+  background-color: white;
 }
 /*end framework*/
 /*nav styling*/
@@ -153,8 +163,8 @@ header nav ul li a:hover {
 .form-container .pass-label {
   position: relative;
 }
-.form-container .pass-label .icon-eye , 
-.form-container .pass-label .icon-eye-slash{
+.form-container .pass-label .icon-eye,
+.form-container .pass-label .icon-eye-slash {
   position: absolute;
   top: 40px;
   right: 47vw;
@@ -165,13 +175,36 @@ header nav ul li a:hover {
   color: var(--graylish-blue-color);
 }
 /*end form styles*/
+/*landing styles*/
+.landing {
+  background: url("/imgs/pyramids.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*end landin style*/
+/*details styling*/
+p.adress {
+  color: var(--graylish-blue-color);
+}
+.image-cont{
+  margin: 0 auto;
+  width: 70vw;
+}
+.image-cont img{
+  width: 100%;
+}
+/*end details styling*/
 /*footer styles*/
 footer {
   font-size: 1.1rem;
   margin-top: auto;
   margin-bottom: 10px;
 }
-footer hr {
+hr {
   border: 1px solid #c1c1c1c1;
 }
 .icon-heart {
@@ -183,12 +216,12 @@ footer hr {
   .form-container {
     width: 85%;
   }
-.form-container .pass-label .icon-eye , 
-.form-container .pass-label .icon-eye-slash{
-  position: absolute;
-  top: 40px;
-  right: 80vw;
-}
+  .form-container .pass-label .icon-eye,
+  .form-container .pass-label .icon-eye-slash {
+    position: absolute;
+    top: 40px;
+    right: 80vw;
+  }
 }
 /*animation*/
 @keyframes opened {

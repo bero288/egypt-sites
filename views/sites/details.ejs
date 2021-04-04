@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%-include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <%-include("../partials/nav")%>
+    <h2 class="align-center"><%= site.title %></h2>
+    <p class="adress">العنوان : <%=site.adress %> </p>
+    <div class="align-center">
+    <h3 >معلومات عن <%=site.title   %> </h3>
+    <p><%=site.body %> </p>
+    </div>
+    <div class="image-cont"  >
+        <img src="/imgs/<%=site.imgUri%>"  >
+    </div>
+    <%- include("../partials/footer") %>
+    </script>
+  </body>
+</html>

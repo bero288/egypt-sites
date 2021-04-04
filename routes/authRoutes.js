@@ -13,4 +13,5 @@ router.get("/login", authConroller.login);
 router.post("/login",authConroller.login_post)
 router.get("/user/profile", isAuth, authConroller.user_profile);
 router.post("/logout", authConroller.logout)
+router.get("/sites/:id", authConroller.site_details);
 module.exports = router;

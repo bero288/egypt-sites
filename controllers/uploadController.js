@@ -37,13 +37,13 @@ function checkFileType(file, cb) {
 }
 //route to create-site
 const sites_create = (req, res) => {
-  res.render("upload", { title: "إنشاء موقع" });
+  res.render("./sites/upload", { title: "إنشاء موقع" });
 };
 //upload post req
 const sites_create_post = (req, res) => {
   upload(req, res, (err) => {
     if (err) {
-      res.render("upload", { msg: err, title: "الرئيسية" });
+      res.render("./sites/upload", { msg: err, title: "الرئيسية" });
     } else {
       const reqBody = req.body;
       const imgUri = req.file.filename;

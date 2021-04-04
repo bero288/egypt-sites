@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include("./partials/head.ejs") %>
+  <%-include("../partials/head.ejs") %>
   <body>
-    <%-include("./partials/nav.ejs") %> 
+    <%-include("../partials/nav.ejs") %> 
     <div class="form-container">
       <h3 class="align-center">إنشاء موقع سياحي جديد</h3>
       <%if(typeof msg != "undefined"){%>  
@@ -27,6 +27,6 @@
         <input type="submit" class="btn btn-blue block sumbit" value="ارسال" />
       </form>
     </div>
-    <%- include("./partials/footer") %>
+    <%- include("../partials/footer") %>
   </body>
 </html>

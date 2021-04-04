@@ -5,6 +5,8 @@
   --grey-color: #7f8c8d;
   --graylish-blue-color: #2c3e50;
   --graylish-blue-bright-color: #34495e;
+  --green-color: #27ae60;
+  --red-color:#c0392b;
 }
 * {
   padding: 0px;
@@ -41,9 +43,19 @@ body {
   color: var(--blue-color);
   border-radius: 2.5px;
 }
+.btn-green {
+  border: var(--green-color) 1px solid;
+  color: var(--green-color);
+  border-radius: 2.5px;
+}
 .btn-grey {
   border: var(--grey-color) 1px solid;
   color: var(--grey-color);
+  border-radius: 2.5px;
+}
+.btn-red {
+  border: var(--red-color) 1px solid;
+  color: var(--red-color);
   border-radius: 2.5px;
 }
 .btn-blue:hover {
@@ -55,9 +67,17 @@ body {
   background-color: var(--grey-color);
   color: white;
 }
+.btn-green:hover {
+  background-color: var(--green-color);
+  color: white;
+}
+.btn-red:hover {
+  background-color: var(--red-color);
+  color: white;
+}
 /*end framework*/
 /*nav styling*/
-header{
+header {
   display: flex;
   position: fixed;
   top: 0px;
@@ -66,7 +86,7 @@ header{
 }
 header .activator {
   padding: 1em;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 header .activator:hover {
@@ -76,15 +96,14 @@ header .activator:hover {
 header .activator.clicked {
   color: white;
   background-color: var(--graylish-blue-bright-color);
-
 }
 header ul {
   display: flex;
   list-style-type: none;
   background-color: var(--graylish-blue-color);
   border-radius: 5em 0 0 5em;
-  margin: .5px 0px 0px 0px;
-  transition: all .5 ease;
+  margin: 0.5px 0px 0px 0px;
+  transition: all 0.5 ease;
   transform: translateX(50px);
   opacity: 0;
   pointer-events: none;
@@ -115,6 +134,8 @@ header nav ul li a:hover {
   margin: 0 auto;
 }
 .form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
 .form-container textarea {
   display: block;
   padding: 5px;
@@ -128,6 +149,20 @@ header nav ul li a:hover {
 }
 .form-container .block {
   margin: 20px auto 0px;
+}
+.form-container .pass-label {
+  position: relative;
+}
+.form-container .pass-label .icon-eye , 
+.form-container .pass-label .icon-eye-slash{
+  position: absolute;
+  top: 40px;
+  right: 47vw;
+  cursor: pointer;
+}
+.form-container .a-reg {
+  text-decoration: none;
+  color: var(--graylish-blue-color);
 }
 /*end form styles*/
 /*footer styles*/
@@ -148,19 +183,25 @@ footer hr {
   .form-container {
     width: 85%;
   }
+.form-container .pass-label .icon-eye , 
+.form-container .pass-label .icon-eye-slash{
+  position: absolute;
+  top: 40px;
+  right: 80vw;
+}
 }
 /*animation*/
 @keyframes opened {
-  to{
-  transform: translateX(0px);
-  opacity: 1;
-  pointer-events: all;
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+    pointer-events: all;
   }
 }
 @keyframes closed {
-  to{
-  transform: translateX(-50px);
-  opacity: 0;
-  pointer-events: none;
+  to {
+    transform: translateX(-50px);
+    opacity: 0;
+    pointer-events: none;
   }
 }

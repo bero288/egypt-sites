@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/icons.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <title>السياحة | <%=title %></title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h3 class="align-center">تسجيل الدخول</h3>
+      <%if(typeof msg != "undefined"){%>
+      <p class="err-msg"><%= msg %></p>
+      <%}%>
+      <form action="/login" method="POST" >  
+        <label for="email">البريد الالكتروني :</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password" class="pass-label">كلمة المرور <span class="icon-eye"></span> :</label>
+        <input type="password" name="password" id="password"> </input>
+        <a href="/register" class="a-reg">إنشاء حساب جديد</a>
+        <input type="submit" class="btn btn-green block sumbit" value="تسجيل الدخول" />
+      </form>
+    </div>
+    <%- include("../partials/footer") %>
+    <script src="./js/log.js"></script>
+  </body>
+</html>
